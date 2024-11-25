@@ -1,66 +1,165 @@
-1. Music DSP - Stuff on Synthesis, Filters, Effects .... cool stuff. You can even find pseudocode for instance of Moog VCF, variation 1: https://www.musicdsp.org/en/latest/Filters/25-moog-vcf-variation-1.html
+1. Music DSP - Stuff on Synthesis, Filters, Effects .... cool stuff. You can even find pseudocode for instance of Moog VCF, variation 1: 
 
+https://www.musicdsp.org/en/latest/Filters/25-moog-vcf-variation-1.html
 
-www.musicdsp.org
 
 2.) Digital Audio Processing Fundamentals . Literally bought this book. Description reads: The book provides an accessible overview of audio signal processing, and enables readers to design and write algorithms for the analysis, synthesis, and manipulation of musical and acoustic signals for any programming language. It provides an overview of highly interdisciplinary topics developed in a simple but rigorous way, and described in a unified and formal language which focuses on determining discrete-time audio signal models. Readers can find within a self-contained volume basic topics ranging over different disciplines: mechanical acoustics, physical systems and linear and nonlinear models, with lumped and distributed parameters; described and developed with the same level of mathematical formalism, easy to understand and oriented to the development of algorithms. Topics include the fundamental concepts of acoustic mechanics and vibration; the design of filters and equalizers for sound signals, the so-called audio effects, abstract methods of sound synthesis, and finally, methods of synthesis by physical modeling.
-
-
-
-
-
------ Harmonics 
-
-Hamonic/Inharmonic overtones. The harmonic tones are the tones you can sing and they sound nice. The harmonic is the soundwave relating the fundamental (lowest/root note) as an integer multiple). 
-
-=== 
-
-Sound source -> Effects -> Control Modules (LFO/ ADSR)
-
-==
-
-Oscillator (VCO)
-
-Waveforms
-Sine
-Triangle
-Sawtooth
-Square
-
-
-===
-
-Oscillator connected to amplifier to device
-
-===
-
-Layering sound waves is important for rich and unique sounds
 
 ===
 
 https://www.earlevel.com/main/
 
+3. Lots of good information
+
+https://www.earlevel.com/main/category/envelope-generators/
+
+
 =====
-
-
+4. https://ccrma.stanford.edu/courses/220a/
 OCW
 Stanford
 Music 220A
-https://ccrma.stanford.edu/courses/220a/
-Music 256a                     : 
+                   : 
 
 This course explores the artful design of interactive musical software, tools, instruments, toys, and games. Topics include strategies for crafting interactive systems, audiovisual design, game design, and the aesthetic dimension of shaping technology in our world today. Course work features several programming assignments, short weekly reading responses, an emphasis on critical design feedback, and a "design your own" final project. You will learn to create systems using a combination of audiovisual programming tools including ChuGL (all new). Prerequisite: experience in C/C++, Java, Unity, or Unreal Engine. 
+
+
+5. https://ccrma.stanford.edu/courses/320c/
+
 Music 320c Audio DSP Projects in Faust and C++
-
-
-
-
-https://ccrma.stanford.edu/courses/320c/
+OCW
+Stanford
+Music 320c
 
 This course explores the artful design of interactive musical software, tools, instruments, toys, and games. Topics include strategies for crafting interactive systems, audiovisual design, game design, and the aesthetic dimension of shaping technology in our world today. Course work features several programming assignments, short weekly reading responses, an emphasis on critical design feedback, and a "design your own" final project. You will learn to create systems using a combination of audiovisual programming tools including ChuGL (all new). Prerequisite: experience in C/C++, Java, Unity, or Unreal Engine. 
 
 
 
+6. https://music.tutsplus.com/tutorials/what-is-subtractive-synthesis--audio-9537u
 
-Oscillator generates sounds -> ADSR -> (Modulation, we are not doing that witchcraft here)l
+Explains Subtractive Synthesisis
+
+====
+
+Native Instruments: Music-Synthesis-101:  https://blog.native-instruments.com/music-synthesis-101/
+What is subtractive synthesis? https://music.tutsplus.com/tutorials/what-is-subtractive-synthesis--audio-9537
+Intro to sybthesis 
+The Scientists and Engineer's Guide to Digitsal Dignal Processing http://www.dspguide.com/pdfbook.htm
+
+Intro to FFT
+
+https://www.allaboutcircuits.com/technical-articles/an-introduction-to-the-fast-fourier-transform/
+
+FFT And Spectral Analysis
+
+https://training.dewesoft.com/online/course/fft-spectral-analysis#autospectra-and-cross-spectra
+
+Biquad FIlters
+
+https://webaudio.github.io/Audio-EQ-Cookbook/audio-eq-cookbook.htmlc
+
+
+
+7. MIDI Specification
+https://www.midi.org/specifications-old/item/table-1-summary-of-midi-message
+
+8. Explanation of MIDI 
+
+https://www.midi.org/articles-old/about-midi-part-1-midi-messages
+
+9. Go Midi Package
+
+https://github.com/go-midi/midi
+
+10. Go Midi Library
+
+https://pkg.go.dev/github.com/go-midi/midi
+
+11. Fyne - GUI - getting started
+
+https://developer.fyne.io/started/
+
+12. Fyne - widgets and layouts
+
+https://developer.fyne.io/widgets/layout
+
+13. Fyne - Build a GUI App with Fyne
+
+https://tutorialedge.net/golang/creating-simple-gui-app-with-fyne/
+
+14. Build a to-do GUI app with fyne:
+
+https://dev.to/aaronksaunders/lets-learn-golang-building-a-simple-todo-app-with-fyne-gui-4gm7
+
+15. PortAudio go bindings:
+
+https://github.com/gordonklaus/portaudio
+
+16. Generating sound in Go:
+
+https://medium.com/@katzien/go-for-a-spin-part-1-36a94cb0d2d0
+
+
+17. Polyphony Explanation:
+
+https://music.stackexchange.com/questions/6229/why-is-the-highest-frequency-on-a-piano-4186-hertz/51688#51688
+
+18. Voice Allocation Technique / Algorithm
+http://msp.ucsd.edu/techniques/v0.01/book-html/node61.html
+
+19. Example Enevelope Generation - Demo code is in C++
+
+https://www.martin-finke.de/articles/audio-plugins-011-envelopes/
+
+20. Stack Overflow asks about implementing an LFO. Helpful user offers advice. (Code is in C)
+
+https://dsp.stackexchange.com/questions/68278/coding-an-lfo-in-c
+
+"Glad it worked out for you. The LFO I sent you modulates the amplitude of the signal using a constant frequency, but if you want to modulate the frequency of the input signal, it's best to use complex numbers and a slightly different mixing function. What you have created is a chirp by varying the rate of change of the phase (lfo variable in your case), i.e. not using a constant step for your phase increment. – 
+Signal
+Commented Jun 13, 2020 at 6:41 "
+
+21. More on modulation
+
+https://blog.faderpro.com/music-production-concepts/modulation-basics-for-synthesis-and-sound-design/
+
+
+---------
+
+
+22. Understanding github actions
+
+https://docs.github.com/actions/learn-github-actions/understanding-github-actions
+
+23. Automating go builds with guithub actions
+
+https://sosedoff.com/2019/02/12/go-github-actions.html
+
+24. CI/CD with Github Actions
+
+https://github.blog/enterprise-software/ci-cd/build-ci-cd-pipeline-github-actions-four-steps/
+
+25. Unit Testing Docs
+
+https://golang.org/pkg/testing/
+
+26. Integration Testing
+https://payodatechnologyinc.medium.com/golang-integration-testing-a-comprehensive-guide-with-examples-7a1727e33be0
+
+27. Config Management
+https://12factor.net/config
+
+28. Environment variables for the above:
+
+https://gobyexample.com/environment-variables
+
+29. Go config management library
+
+https://github.com/spf13/viper
+
+
+30. Aliasing (Audio)
+https://www.earlevel.com/main/1996/10/20/what-is-aliasing/
+
+
 

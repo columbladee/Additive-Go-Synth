@@ -1,23 +1,24 @@
-1. Additive Synth Features
+1. Project Features for MVP
 	A. Sine, Square, Triangle, Sawtooth Waveforms need functions
 		i. Pulse with modulation for applicable waves
 	B. LFO to modulate params like pitch or pulse width (?? or others)
-	C. AFDR envelope for sound shaping
+	C. ADSR Envelope
 	D. Polyphony: Control up to 8 voices
-	E. Midi Keyboard Control: Use PortMidi for note-on/off and modulation inpute
+	E. Midi Keyboard Control: Note On/Off using Midi Keyboard, Modulate LFO
 	
 2. GUI Features
-	A. Build with Fyne
-	B. Controls for each oscillator:
-		i. waveform sellection
-		ii. frequency and amplitude sliders
+	A. Oscillator selection (on/off/ % blend)
+		i. Waveform sellection (Potentiometer icon, control with midi keyboard or mouse, ideally both)
+		ii. frequency and amplitude sliders (Mouse and/or MIDI)
 	C. LFO Controls
-		i. Waveform, frequency, depth slipders
+		i. Waveform, frequency, depth sliders (again, Mouse/Keyboard)
 	D. ADSR Envelope sliders
 	E. Polyphony setting dropdown
-	F. Visual feedbck for MIDi (e.g. which notes are being pressed)
+	F. Visual Display for activated midi note in GUI
+
 3. Audio Playback
-	A. Real-time playback with PortAudio (Could migrate to Oto eventually)
+	A. Real-time playback
+	
 
 
 

@@ -1,22 +1,3 @@
-additive-synth/
-├── main.go                # Entry point
-├── gui/                   # GUI implementation (Fyne)
-│   ├── app.go             # Main Fyne application
-│   ├── controls.go        # GUI controls for synth features
-├── audio/                 # Core audio processing
-│   ├── synth.go           # Synthesizer engine
-│   ├── oscillator.go      # Oscillator implementation
-│   ├── wavetable.go	   # Waveform generation Logic
-│   ├── envelope.go        # ADSR envelope
-│   ├── lfo.go             # Low-frequency oscillator
-│   ├── mixer.go           # Polyphonic voice mixer
-├── midi/                  # MIDI keyboard integration
-│   ├── midi.go            # PortMIDI handling
-├── pkg/                   # Utility and shared resources
-│   ├── util/              # Shared utility functions
-│   │   ├── constants.go   # Centralized constants for the application
-│   │   ├── config.go      # Configuration and settings handling
-├── go.mod                 # Go module file
 
 
 
