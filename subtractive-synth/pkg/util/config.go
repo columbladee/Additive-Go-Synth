@@ -15,6 +15,37 @@ type Config struct {
 }
 
 
-// Config struct samplerate buffersize numosc midiinput
 
 //loadconfig
+
+func LoadConfig(filename string) (*Config, error) {
+	// content read with os.Readfile
+	bytes, err := os.ReadFile(filename)
+	if err != nil {
+		log.Printf("Failed to read config file: %v", err)
+		return nil err
+	}
+
+	var config Config
+	// unmarshal json content
+	err = json.Unmarshal(bytes, &config)
+	if err != nil {
+		log.Printf("Failed to parse config file: %v", err)
+		return nill, err
+	}
+
+	return &config, nil
+
+}
+
+func DefaultConfig() *Config {
+	return &Config {
+		SampleRate:	SampleRate,
+		BufferSize:	BufferSize,
+		NumOscillators: NumOscillators,
+		MidiInput:	"default",
+	}
+}
+
+
+// add setters and getters
