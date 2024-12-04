@@ -11,7 +11,7 @@ type Config struct {
 	SampleRate	float64	`json:"sample_rate"`
 	BufferSize	int	`json:"buffer_size"`
 	NumOscillators	int	`json:"num_oscillators"`
-	MidiInput	string	
+	MidiInput	string	`json:"midi_input"`
 }
 
 
@@ -23,7 +23,7 @@ func LoadConfig(filename string) (*Config, error) {
 	bytes, err := os.ReadFile(filename)
 	if err != nil {
 		log.Printf("Failed to read config file: %v", err)
-		return nil err
+		return nil, err
 	}
 
 	var config Config
@@ -31,7 +31,7 @@ func LoadConfig(filename string) (*Config, error) {
 	err = json.Unmarshal(bytes, &config)
 	if err != nil {
 		log.Printf("Failed to parse config file: %v", err)
-		return nill, err
+		return nil, err
 	}
 
 	return &config, nil
@@ -40,7 +40,7 @@ func LoadConfig(filename string) (*Config, error) {
 
 func DefaultConfig() *Config {
 	return &Config {
-		SampleRate:	SampleRate,
+		SampleRate:	SampleRate, // ALl of these are constants from constants.go
 		BufferSize:	BufferSize,
 		NumOscillators: NumOscillators,
 		MidiInput:	"default",
@@ -48,4 +48,4 @@ func DefaultConfig() *Config {
 }
 
 
-// add setters and getters
+// add setters and getters later
