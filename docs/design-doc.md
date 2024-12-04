@@ -45,6 +45,9 @@ midi/midi.go using portMIDI
 	-map velocity to amplitude and mod wheel to lfo params
 	-test midi input by logging events and triggering sample tones
 
+parser.go
+	-handles raw MIDI data 
+
 
 Phase 4: LFO / Modulation
 

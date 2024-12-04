@@ -3,8 +3,10 @@
 		i. Pulse with modulation for applicable waves
 	B. LFO to modulate params like pitch or pulse width (?? or others)
 	C. ADSR Envelope
+	Q. Filters: High, Low, Band, Notch
 	D. Polyphony: Control up to 8 voices
 	E. Midi Keyboard Control: Note On/Off using Midi Keyboard, Modulate LFO
+	F. Midi Parser 
 	
 2. GUI Features
 	A. Oscillator selection (on/off/ % blend)
